@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>My Todo Manager</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+    <link rel="stylesheet" href="/fontawesome-free-5.15.4-web/css/all.min.css">
+    <link rel="icon" href="/images/Capture.PNG">
+
+    <script>
+        if ('serviceWorker' in navigator){
+            window.addEventListener('load', ()=>{
+                navigator.serviceWorker.register('./sw.js');
+            });
+        }
+    </script>
+    
+</head>
+<body>
+    <header>
+        <nav>
+
+           <div class="logo">
+               <h2>TaskMan</h2>
+           </div>
+           <div class="nav-link">
+               <a href="#">Task Board</a>
+           </div>
+        </nav>
+    </header>
+    <main>
+        <div class="wrapper">
+            <div class="inputField">
+                <input type="text" placeholder="Add your task" class="myInput">
+                
+                <button id="add"><i class="fas fa-plus"></i></button>
+            </div>
+            <h1 style="margin-bottom: 15px;">My Tasks</h1>
+            <ul class="taskList">
+               <!-- task come local storage -->
+                </ul>
+            <div class="footer">
+                <span>You have <span class="pendingTask">0</span> pending task</span>
+                <button>Clear All</button>
+            </div>
+        </div>
+        <div class="illustration">
+            <img src="/images/likes.png" alt="illustration">
+            <p>Goals that are pen down can<br>
+                be achieved</p>
+        </div>
+    </main>
+
+
+
+    <script src='app.js'></script>
+</body>
+</html>
