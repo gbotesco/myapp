@@ -24,7 +24,7 @@
     ],
     "theme_color":"#D35EDD",
     "background_color":"#FFFF",
-    "start_url": "/taskman-app/",
+    "start_url": "/myapp/",
     "display": "standalone",
     "orientation":"portrait"
 }
